@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JFt Quiz page</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .subash-info{
+            border: 1px solid navy;
+            width: 58%;
+            background: lightgray;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .container-fluid{
+            border: 1px solid navy;
+            width: 50%;
+        }
+        .aaa{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .confirmBtn{
+            background: rgb(15, 148, 15);;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 20px ;
+        }
+
+        @media only screen and (min-width:200px) and (max-width:575px){
+            .container-fluid{
+
+            width: 100%;
+        }
+        .subash-info{
+
+            width: 100%;
+        }
+        h3{
+            font-size: 18px;
+        }
+        }
+
+    </style>
+
+    
+</head>
+<body>
+    <div class="container-fluid text-center p-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 bg-dark p-1" style="color: white;">
+                    <h3>Confirm Details</h3>
+                </div>
+            </div>
+            <div class="aaa text-start mt-5">
+                <div class="row subash-info">
+                <div class="col-6 ">
+                    Last Name:<br>
+                    First Name:<br>
+                    Exam Name:<br>
+
+                    Language:
+                </div>
+                <div class="col-6">
+                    Parajuli<br>
+                    Subash<br>
+                    Prometric Exam<br>
+
+                    US English
+                </div>
+            </div>
+
+            </div>
+            
+            <div class="row mt-5 mb-3">
+                <div class="col-12">
+                    <h3>Are the details above correct?</h3>
+                    <a href="login.html"><button class="confirmBtn">Cancel</button></a>
+                    <a href="quiz.html"><button class="confirmBtn">Confirm</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

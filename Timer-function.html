@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>JFT-Basic with Navigation UI - All Questions</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: white; }
+    header {
+      background-color: black;
+      color: white;
+      padding: 0.8em 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.95em;
+    }
+</style></head>
+<body>
+
+<header>
+<div><span id="question-number" style="font-weight: normal;"></span><br/>Section: Conversation and Expression</div>
+<div style="display: flex; align-items: center; gap: 0.6em;">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE0AAABbCAYAAAA2hgg2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAACErSURBVHhe7Xxnc1xXeubTOWd0A2hEIoMESBCEGDQaSWNbM+WprVqXy66ya/1j9rds7Qfvt3X5g5VmNZ5RoCSSIEESIAiAyLHROed93nO7SUQShMiRXMVHenmB7nvvOec5bzz3XOgA1Cnv8BrQN47v8Bp4R9o58I60c+AdaefAO9LOgXeknQPvSDsH3pH22gD+P+JYeF9PcbxwAAAAAElFTkSuQmCC" style="height: 20px;"/>
+<div>
+<div style="font-size: 0.9em;">Section Time Remaining</div>
+<div id="time" style="font-weight: bold; font-size: 1.2em;">01:00:00</div>
+</div>
+</div>
+<div><button class="finish-button" style="background:#f4c6a1; padding:0.5em 1em; border:none; border-radius:5px; font-weight:bold;">Finish Section</button></div>
+</header>
+
+
+<!-- Timer Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Timer functionality
+  let timeInSeconds = 60 * 60; // 1 hour = 3600 seconds
+  const timeDisplay = document.getElementById('time');
+  function updateTimer() {
+    const hours = Math.floor(timeInSeconds / 3600);
+    const minutes = Math.floor((timeInSeconds % 3600) / 60);
+    const seconds = timeInSeconds % 60;
+    const formattedTime = 
+      hours.toString().padStart(2, '0') + ':' +
+      minutes.toString().padStart(2, '0') + ':' +
+      seconds.toString().padStart(2, '0');
+    timeDisplay.textContent = formattedTime;
+    if (timeInSeconds <= 0) {
+      alert('Time is up! The test will now be submitted automatically.');
+      // Auto-submit the test when time runs out
+      document.querySelector('.finish-button').click();
+      return;
+    } 
+    timeInSeconds--;
+  }
+  // Update timer every second
+  const timerInterval = setInterval(updateTimer, 1000);
+  // Initial display
+  updateTimer();
+});
+</script>
+

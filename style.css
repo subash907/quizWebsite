@@ -1,0 +1,222 @@
+ body {
+            font-family: Arial, sans-serif;
+
+            height: 250vh; /* Scroll demo को लागि */
+            background-color: #f0f0f5;
+        }
+
+        /* --- Main Toggle Button --- */
+ 
+
+        /* --- Internal Button Container (Toggle Area) --- */
+        #buttonContainer {
+            /* Hiding Properties */
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            margin-top: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 25px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            
+            /* Transitions for smooth effect */
+            transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out, margin 0.5s ease-in-out, padding 0.5s ease-in-out, border-color 0.5s ease-in-out;
+        }
+        #buttonContainer h3{
+            font-size: 35px;
+        }
+        #buttonContainer button{
+            font-size: 20px;
+        }
+        .contextA-list{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contextA-list-box{
+            border: 1px solid navy;
+            border-radius: 5px;
+            padding: 0.2em 2em;
+            background: #00558a;
+            color: white;
+            border: 2px solid red;
+
+        }
+        .buttonContainer h3{
+            display: block;
+        }
+
+        /* Showing Internal Buttons */
+        #buttonContainer.visible {
+            max-height: 300px; /* Internal content को लागि पर्याप्त उचाई */
+            opacity: 1;
+            padding: 15px;
+            margin-top: 20px;
+
+        }
+
+        /* --- Internal Buttons --- */
+        .internal-btn {
+            padding: 10px 15px;
+            font-size: 16px;
+            margin-right: 10px;
+            background-color: #2ecc71; /* Green */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+
+        /* --- Content Areas --- */
+        .content-box {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #bdc3c7;
+            background-color: #ffffff;
+            border-radius: 5px;
+            /* सुरुमा सबै content लुकाउने */
+            display: none; 
+            font-size: 25px;
+
+        }
+        .content-box a{
+            text-decoration: none;
+        }
+
+        .content-box.active {
+            /* Active content मात्र देखाउने */
+            display: block;
+            background: #f4f9ff;
+        }
+
+
+
+
+.cbt-two-btn{
+    background: #f4f9ff;
+
+}
+.cbt-btn{
+    color: black;
+    background: #e5e9ec;
+    border-top: 5px solid #00558a;
+    border: 2px solid navy;
+    padding: 1.5em;
+    width: 220px;
+    text-align: center;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+
+.headers{
+    background: #024c96;
+    color: white;
+}
+.navs{
+    padding-top:5px ;
+    border: 1px solid black;
+    padding-bottom: 10px;
+}
+.navs a button {
+    border: none;
+    background: none;
+    padding: 0em 0.5em;
+    
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-boxes-area{
+    justify-content: center;
+    align-items: center;
+}
+.main-boxes{
+    background: #f0f3f7;
+    border: 2px solid navy;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    align-items: center;
+    
+}
+.see-more-btn{
+    background: #00558a;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+}
+.materialBox{
+    border: 1px solid navy;
+    margin: 10px;
+    padding: 20px;
+    width: 30%;
+        background: #f0f3f7;
+    border-left: 5px solid #00558a;
+    padding: 1.2em;
+    width: 280px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    transition: background 0.3s, transform 0.2s;
+}
+
+
+@media only screen and (min-width:200px) and (max-width:575px){
+    body {
+
+            /* Scroll गर्न मिल्ने बनाउन धेरै ठाउँ */
+            height: 250vh; 
+
+        }
+    .headers h1{
+        font-size: 1.5rem;
+    }
+    .headers h3{
+        font-size: 1rem;
+    }
+    .navs{
+    padding-top:5px ;
+}
+    .navs a button {
+        border-radius: 5px;
+        padding: 0.2em 0.8em;
+}
+   .content-box {
+    font-size:medium;
+   }
+    #buttonContainer h3{
+            font-size: 18px;
+        }
+    #buttonContainer{
+        font-size: 18px;
+    }
+    #buttonContainer button{
+        font-size: 18px;
+    }
+    .cbt-btn {
+        padding: 1em;
+
+    }
+    .contextA-list-box {
+    border: 1px solid navy;
+    border-radius: 5px;
+    padding: 0.8em 2.9em;
+    font-size: 15px;
+
+}
+
+        
+
+}
